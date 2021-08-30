@@ -15,18 +15,19 @@
 
 
 
-// function findCommonItem(arr1, arr2){
-// 	for (let i= 0; i < arr1.length; i++){
-// 		for(let j = 0; j < arr2.length; j++){
-// 			if(arr1[i] === arr2[j]){
-// 				return true;
-// 			}
-// 		}
-// 	}
-// 	return false; 
-// }
+function findCommonItem(arr1, arr2){
+	for (let i= 0; i < arr1.length; i++){
+		for(let j = 0; j < arr2.length; j++){
+			if(arr1[i] === arr2[j]){
+				return true;
+			}
+		}
+	}
+	return false; 
+}
 
 //O(a * b) Not the best time
+//O(1) -Space Complexity
 
 // findCommonItem(array1, array2);
 
@@ -62,6 +63,14 @@ function containsCommonItem2(arr1, arr2){
 	return false;
 }
 
-containsCommonItem2(array1, array2)
+// containsCommonItem2(array1, array2)
+//O(a) - Space Complexity
 
 //O(a + b) Time Complexity is better than O(a *b)
+
+
+function containsCommonItem3(arr1, arr2){
+	return arr1.some(item => arr2.includes(item))
+}
+
+containsCommonItem3(array1, array2)
